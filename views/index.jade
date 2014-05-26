@@ -1,0 +1,142 @@
+doctype html
+html
+  head
+    title GeoBooks
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='stylesheets/bootstrap.min.css', rel='stylesheet')
+    link(href='stylesheets/bootstrap-responsive.min.css', rel='stylesheet')
+    link(href='stylesheets/bootstrap-overrides.css', rel='stylesheet')
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(href='stylesheets/responsive.css', rel='stylesheet')
+    link(href='//js.arcgis.com/3.9/js/esri/css/esri.css', rel='stylesheet')
+    link(href='//fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic', rel='stylesheet', type='text/css')
+  body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container
+          a.brand
+            strong
+              span(style='color: rgb(115, 224, 142);') Geo
+              | Books
+          .nav-collapse.collapse
+            ul.nav(style='float: right')
+              li
+                a#btn-buy-back.btn-view(data-view='main', style='color: white; display: none') Go Back
+
+    #container-map
+      section#main.hide
+        .container
+          .well.well-dark.text-center
+            .spacer-60
+            h1 I'm looking to...
+            .spacer-60
+            .well.well-dark.btn-index-action.btn-view(data-view='buy', style='margin-right: 8px;') Buy
+            .well.well-dark.btn-index-action.btn-view(data-view='sell', style='margin-right: 8px;') Sell
+            .well.well-dark.btn-index-action.btn-view(data-view='chat') Chat
+      section#buy.hide
+        .container
+          .well.well-dark.text-center
+            .well.well-darker.btn-view(style='float: right;', data-view='main') Go Back
+            .spacer-60
+            br
+            h2 Buy Locally, Save Moolah
+            .spacer-80
+            form.form-validation
+              input.input-postal-code(class='validate[required]', placeholder='Postal Code', type='text')
+              br
+              input.input-book-title(placeholder='Book Title', type='text')
+              br
+              .well.well-darker.well-btn.btn-search(data-from='buy')
+                | Search
+                i.icon-search.icon-white
+              .spacer-40
+      section#sell.hide
+        .container
+          .well.well-dark.text-center
+            .well.well-darker.btn-view(style='float: right;', data-view='main') Go Back
+            .spacer-60
+            br
+            h2 Sell Locally, Make Moolah
+            .spacer-80
+            input.input-book-title(placeholder='Book Title', type='text')
+            br
+            input.input-price(placeholder='Price', type='text')
+            br
+            input.input-email(placeholder='E-mail', type='text')
+            br
+            input.input-postal-code(placeholder='Postal Code', type='text')
+            br
+            textarea.input-description(placeholder='Description (Optional)', style='width: 206px', rows='6')
+            br
+            #btn-sell.well.well-darker.well-btn
+              | Sell
+              i.icon-usd.icon-white
+            .spacer-20
+            | (Your e-mail address will stay private.)
+            .spacer-40
+      section#chat.hide
+        .container
+          .well.well-dark.text-center
+            .well.well-darker.btn-view(style='float: right;', data-view='main') Go Back
+            .spacer-60
+            br
+            h2 Chat Locally, Make Friends
+            .spacer-80
+            h3 Which book would you like to discuss?
+            input.input-postal-code(placeholder='Postal Code', type='text')
+            br
+            input.input-book-title(placeholder='Book Title', type='text')
+            br
+            #chat-search.well.well-darker.well-btn.btn-view
+              | Search
+              i.icon-search.icon-white
+            .spacer-40
+      section#social.hide
+        .container
+          #well-board.well.well-dark
+            .well.well-darker.btn-view(style='float: right;', data-view='chat') Go Back
+            #well-board-placeholder.text-center
+            .spacer-40
+            h1 No Posts Found
+            .spacer-60
+            a.btn.btn-geo.btn-large Be the First!
+
+    #modal-advertisement.modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            a.close(data-dismiss='modal', aria-hidden='true') ×
+            h4.modal-title
+          .modal-body
+            form(role='form')
+              .form-group
+                img.text-center(src='')
+                .container-description
+          .modal-footer
+            a.btn.btn-default.btn-white(data-dismiss='modal') Close
+            a#btn-message.btn.btn-primary.btn-geo Message Seller
+    #modal-post.modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            a.close(data-dismiss='modal', aria-hidden='true') ×
+            h4.modal-title Discuss the Book!
+          .modal-body
+            form(role='form')
+              .form-group
+                label(for='form-message') Leave a Message
+                div(style='margin: auto;')
+                  textarea#form-message.form-control(placeholder='Message', rows='6', style='width: 95%;')
+          .modal-footer
+            a.btn.btn-default.btn-white(data-dismiss='modal') Close
+            a#btn-publish.btn.btn-primary.btn-geo Publish Message
+    script(src='//js.arcgis.com/3.9/')
+    script(src='javascripts/jquery.js')
+    script(src='javascripts/underscore.js')
+    script(src='javascripts/esri.js')
+    script(src='javascripts/modal.js')
+    script(src='javascripts/tooltip.js')
+    script(src='javascripts/typeahead.js')
+    script(src='javascripts/popover.js')
+    script(src='javascripts/main.js')

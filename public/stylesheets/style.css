@@ -1,0 +1,100 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', sans-serif !important;
+  font-size: 16px;
+  height: 100%;
+}
+
+input[type="text"], textarea {
+  font-family: 'Lato', sans-serif !important;
+}
+
+html {
+  height: 100%;
+}
+
+#container-map {
+  height: 100%;
+}
+
+a {
+  color: #00B7FF;
+}
+
+section {
+  padding-top: 50px;
+}
+
+.well-dark {
+  background: url('../images/pixel-50.png');
+  color: #fff;
+  border: 0;
+}
+
+.well-darker {
+  background: url('../images/pixel-60.png');
+  color: #fff;
+  border: 0;
+}
+
+.well-btn {
+  width: 180px;
+  margin: auto;
+}
+
+.btn-index-action {
+  background: url('../images/pixel-60.png');
+  vertical-align: top;
+  display: inline-block;
+  padding: 49px 20px;
+  width: 20%;
+  font-size: 36px;
+  border: 0;
+}
+
+.well .input-large {
+  width: 410px;
+  height: 44px;
+  margin-bottom: 10px;
+  line-height: 30px;
+  padding: 11px 19px;
+  font-size: 17.5px;
+}
+
+.btn-glass {
+  background: url('../images/pixel-50.png') !important;
+  color: #fff !important;
+  text-shadow: none;
+}
+
+.btn-geo {
+  color: #fff !important;
+  background: #2ecc71 !important;
+  text-shadow: none;
+}
+
+.btn-blue {
+  color: #fff !important;
+  background: #3498db !important;
+  text-shadow: none;
+}
+
+.btn-white {
+  background: #fff !important;
+  text-shadow: none;
+}
+
+body {
+  background: url('../images/ss_blur.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg.jpg', sizingMethod='scale')";
+}
+
+i {
+  margin-left: 8px;
+  margin-top: 4px;
+}

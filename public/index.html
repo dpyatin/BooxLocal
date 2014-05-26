@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GeoBooks</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+      <link href="stylesheets/bootstrap-responsive.min.css" rel="stylesheet">
+      <link href="stylesheets/bootstrap-overrides.css" rel="stylesheet">
+      <link href="stylesheets/style.css" rel="stylesheet">
+      <link href="stylesheets/responsive.css" rel="stylesheet">
+      <link href="http://js.arcgis.com/3.9/js/esri/css/esri.css" rel="stylesheet">
+      <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="./index.html"><strong><span style="color: rgb(115, 224, 142)">Geo</span>Books</strong></a>
+        </div>
+      </div>
+    </div>
+    <div id="container-map">
+      <section id="login" class="hide">
+        <div class="container">
+          <div class="well well-dark text-center">
+            <div class="spacer-60"></div>
+            <h1>Welcome to GeoBooks</h1>
+            <h2>The local place to buy, sell and talk about the hottest reads.</h2>
+            <div class="spacer-80"></div>
+            <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
+            <div class="spacer-20"></div>
+            (We'll never post to your wall.)
+            <div class="spacer-20"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="main" class="hide">
+        <div class="container">
+          <div class="well well-dark text-center">
+            <div class="spacer-60"></div>
+            <h1>I'm looking to...</h1>
+            <div class="spacer-60"></div>
+            <div class="well well-dark btn-index-action btn-view" data-view="buy" style="margin-right: 8px">Buy</div>
+            <div class="well well-dark btn-index-action btn-view" data-view="sell" style="margin-right: 8px">Sell</div>
+            <div class="well well-dark btn-index-action btn-view" data-view="chat">Chat</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="buy" class="hide">
+        <div class="container">
+          <div class="well well-dark text-center">
+            <div class="well well-darker btn-view" style="float: right" data-view="main">Go Back</div>
+            <div class="spacer-60"></div>
+            <br />
+            <h2>Buy Locally, Save Moolah</h2>
+            <div class="spacer-80"></div>
+            <input class="input-postal-code" placeholder="Postal Code" type="text" /><br />
+            <input class="input-book-title" placeholder="Book Title" type="text" /><br />
+            <div class="well well-darker well-btn btn-search" data-from="buy">Search <i class="icon-search icon-white"></i></div>
+            <div class="spacer-40"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sell" class="hide">
+        <div class="container">
+          <div class="well well-dark text-center">
+            <div class="well well-darker btn-view" style="float: right" data-view="main">Go Back</div>
+            <div class="spacer-60"></div>
+            <br />
+            <h2>Sell Locally, Make Moolah</h2>
+            <div class="spacer-80"></div>
+            <input class="input-postal-code" placeholder="Postal Code" type="text" /><br />
+            <input class="input-book-title" placeholder="Book Title" type="text" /><br />
+            <div id="sell-search" class="well well-darker well-btn btn-search" data-from="sell">Search <i class="icon-search icon-white"></i></div>
+            <div class="spacer-40"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="chat" class="hide">
+        <div class="container">
+          <div class="well well-dark text-center">
+            <div class="well well-darker btn-view" style="float: right" data-view="main">Go Back</div>
+            <div class="spacer-60"></div>
+            <br />
+            <h2>Chat Locally, Make Friends</h2>
+            <div class="spacer-80"></div>
+            <h3>Which book would you like to discuss?</h3>
+            <input class="input-postal-code" placeholder="Postal Code" type="text" /><br />
+            <input class="input-book-title" placeholder="Book Title" type="text" /><br />
+            <div id="chat-search" class="well well-darker well-btn btn-view">Search <i class="icon-search icon-white"></i></div>
+            <div class="spacer-40"></div>
+          </div>
+        </div>
+      </section>
+
+section#social.hide
+    .container
+        #well-board.well.well-dark
+          .well.well-darker.btn-view(style='float: right;', data-view='chat') Go Back
+          #well-board-placeholder.text-center
+            .spacer-40
+            h1 No Posts Found
+            .spacer-60
+            a.btn.btn-geo.btn-large Be the First!
+
+    </div>
+
+    <div id="modal-advertisement" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"><a data-dismiss="modal" aria-hidden="true" class="close">&times;</a>
+            <h4 class="modal-title">Catcher in the Rye</h4>
+          </div>
+          <div class="modal-body">
+            <form role="form">
+              <div class="form-group">
+                <img src="" class="text-center" />
+                <strong>Price</strong>: $45<br />
+                Sed ut perspiciatis, unde sed 
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer"><a data-dismiss="modal" class="btn btn-default btn-white">Close</a><a id="btn-publish" class="btn btn-primary btn-geo">Publish Message</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-post" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"><a data-dismiss="modal" aria-hidden="true" class="close">&times;</a>
+            <h4 class="modal-title">Discuss the Book!</h4>
+          </div>
+          <div class="modal-body">
+            <form role="form">
+              <div class="form-group">
+                <label for="form-message">Leave a Message</label>
+                <div style="margin: auto">
+                  <textarea id="form-message" placeholder="Message" rows="6" class="form-control" style="width: 95%"></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer"><a data-dismiss="modal" class="btn btn-default btn-white">Close</a><a id="btn-publish" class="btn btn-primary btn-geo">Publish Message</a></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var book_titles = ['1', '2', '3'];
+    </script>
+    <script src="http://js.arcgis.com/3.9/"></script>
+    <script src="javascripts/jquery.js"></script>
+    <script src="javascripts/esri.js"></script>
+    <script src="javascripts/facebook.js"></script>
+    <script src="javascripts/modal.js"></script>
+    <script src="javascripts/tooltip.js"></script>
+    <script src="javascripts/typeahead.js"></script>
+    <script src="javascripts/popover.js"></script>
+    <script src="javascripts/main.js"></script>
+  </body>
+</html>

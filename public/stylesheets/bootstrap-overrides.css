@@ -1,0 +1,27 @@
+.brand {
+  text-transform: uppercase;
+}
+
+.navbar-inverse .navbar-inner {
+  background: url('../images/pixel-50.png');
+}
+
+.navbar-inverse .brand {
+  color: #fff;
+}
+
+.spacer-20 {
+  height: 20px;
+}
+
+.spacer-40 {
+  height: 40px;
+}
+
+.spacer-60 {
+  height: 60px;
+}
+
+.spacer-80 {
+  height: 80px;
+}
